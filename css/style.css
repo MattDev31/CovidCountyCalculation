@@ -1,0 +1,273 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font: 16px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin:0;
+    background-color: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto 15px auto;
+    overflow: hidden;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background: #5c5c5b;
+    min-height: 40px;
+    padding-top: 20px;
+    border-bottom: #ff975d 3px solid;
+    color: #fff;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+header a:hover {
+    color: #000;
+}
+
+header li {
+    display: inline;
+    padding: 0 15px 0 0;
+}
+#titleImage {
+
+}
+
+#titleImage .container{
+    width: 100%;
+}
+
+#imageArea {
+    min-height: 400px;
+    background: url(../images//covid_banner.jpg) no-repeat;
+    margin: auto;
+    background-size: cover;
+}
+
+.imageOverlay{
+    min-height: 100px;
+    max-width: 60%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .75);
+    color: #fff;
+    margin-top: 150px;
+    padding: 0px 10px;
+}
+
+#covidData {
+    margin: auto;
+    text-align: center;
+}
+
+
+#countySelector {
+    margin: 3px;
+}
+
+#counties {
+    font-size: 16px;
+    font-weight: bold;
+    box-sizing: border-box;
+    border: 1px #5c5c5b solid;
+    box-shadow: 0 1px 0 2px rgba(0,0,0, .04);
+    border-radius: .5em;
+    background-color: #fff;
+    background: linear-gradient(to bottom, #fff 25%,#cccccc 90%);
+    padding: .6em 1.4em .5em .8em;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 25px;
+
+}
+
+#counties:hover {
+    border-color: #888;
+}
+
+#counties:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    color: #222;
+    outline: none;
+}
+
+#covidData {
+
+}
+
+.emptyData, .emptyWrapper{
+
+}
+
+.populated, .emptyWrapper {
+    max-height: 0;
+    min-height: 0;
+    overflow-y: hidden;
+    transition: min-height 0.8s ease-in-out;
+}
+
+.container .populated{
+    min-height: 290px;
+    margin: 0;
+    padding: 0;
+}
+
+.emptyData, .errorData, .caseData {
+    background-color: rgba(177, 50, 50, .8);
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    float: left;
+    width: 99%;
+    padding-top: 5px;
+    min-height: 250px;
+    box-shadow: 7px 10px 15px -7px rgba(85, 85, 85, 0.6);
+}
+
+.errorData, .caseData {
+
+}
+
+.sourceHeader, .disclaimerHeader, .contentHeader {
+    padding: 0;
+    margin: 5px 0 10px 0;
+    text-align: center;
+}
+
+#dataSource {
+    padding-bottom: 20px;
+}
+
+#dataSource a {
+    color: #000;
+}
+
+#dataSource a:visited {
+    color: #000;
+}
+
+#dataSource a:hover {
+    color: #fff;
+}
+
+.dataHeader {
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+#boxes {
+    width: 99%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #afafaf;
+    border: #ccc solid 1px;
+    margin-bottom: 15px;
+    box-shadow: 7px 10px 15px -7px rgba(85, 85, 85, 0.4);
+}
+
+#boxes .box {
+    box-sizing: border-box;
+    width: 35%;
+    text-align: center;
+    padding: 10px;
+}
+
+#disclaimer a {
+    color: #000;
+}
+
+#disclaimer a:visited {
+    color: #000;
+}
+
+#disclaimer a:hover {
+    color: #fff;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #5c5c5b;
+    padding: 10px;
+    flex-shrink: 0;
+    color: #fff;
+}
+
+@media(max-width: 768px) {
+
+    header nav,
+    header nav li,
+    #mainContent p,
+    #countySelector,
+    #dataSource,
+    #mainContent
+    {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    #counties {
+        float: none;
+        text-align: center;
+        width: 98%;
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+
+    #boxes {
+        justify-content: space-around;
+        flex-flow: row wrap;
+    }
+
+    #boxes .box {
+        position: relative;
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    .container .populated{
+        margin-bottom: 20px;
+    }
+
+    .container .populated {
+        min-height: 350px;
+    }
+
+    .caseData {
+        min-height: auto;
+        margin-bottom: 20px;
+    }
+
+    #imageArea {
+        background-position-x: -150px;
+    }
+}
+
+@media(min-width: 1920px) {
+    body {
+        width: 65%;
+        margin: auto;
+    }
+}

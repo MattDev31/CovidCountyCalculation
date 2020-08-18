@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Case Data</title>
+    <script language="javascript" type="module" src="/js/dataProcessor.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#countyCheck">Case Data</a></li>
+                        <!-- <li class="spacer">|</li> -->
+                        <li><a href="#dataSource">Sources</a></li>
+                        <!-- <li class="spacer">|</li> -->
+                        <li><a href="#disclaimer">Disclaimer</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+        <section id="titleImage">
+            <div class="container">
+                <div id="imageArea">
+                    <!-- <img class="covidImage" src="images/covid_banner.jpg" title="Coronavirus" /> -->
+                    <!-- <img id="covidImage" src="images/covid_banner.jpg" /> -->
+                    <div class="imageOverlay">
+                        <h1 class="covidCaption">Minnesota COVID-19 Classroom Learning Model By County</h1>
+
+                    </div>
+                    
+                    <!-- <div class="imageOverlay">
+
+                        <p class="covidCaption">Minnesota COVID-19 Classroom Learning Model By County</p>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <section id="mainContent">
+            <div class="container">
+                <h2 class="contentHeader">Case Data</h2>
+                <p>Select a county to see case data and a suggested learning model.</p>
+                <div id="countySelector">
+                    <!-- <form id="countyCheck"> -->
+                    <select id="counties" name="counties">
+                        <option value="none" selected disabled hidden>
+                            Select A County
+                        </option>
+                    </select>
+
+                    <!-- <input id="submitButton" type="button" value="See Model" onclick="getCountyCovidData()"> -->
+                    <!-- </form> -->
+                </div>
+                <div id="dataWrapper" class="emptyWrapper">
+                    <div id="covidData" class="emptyData"></div>
+                </div>
+                <!-- <hr /> -->
+            </div>
+        </section>
+
+        <section id="dataSource">
+            <div class="container">
+                <h2 class="sourceHeader">Sources</h2>
+                <!-- <p>This page was populated by data from the following:</p> -->
+                <div id="boxes">
+                    <div class="box">
+                        <h3 class="dataHeader">US Census Bureau</h3>
+                        <a href="https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/totals/"
+                            target="_blank">Population Data</a>
+                        <p>Population data is based on 2019 estimated population for each county.</p>
+                    </div>
+                    <div class="box">
+                        <h3 class="dataHeader">COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns
+                            Hopkins
+                            University</h3>
+                        <a href="https://github.com/CSSEGISandData/COVID-19" target="_blank">COVID Case Data</a>
+                        <p>This case data is updated daily for cases reported in each US county and <a href="https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series#time-series-summary-csse_covid_19_time_series" target="_blank">"if inaccuracies are identified in our historical data"</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="disclaimer">
+            <div class="container">
+                <div>
+                    <h2 class="disclaimerHeader">Disclaimer</h2>
+                    <p>
+                        This was put together as a personal project for a quick calculation based on the population and
+                        case
+                        data from the listed sources. In no way is this an authoritative reference or recommendation for
+                        determining the learning model used in your county. Please see the <a
+                            href="https://www.health.state.mn.us/diseases/coronavirus/index.html"
+                            target="_blank">Minnesota
+                            Department of Health</a> website and <a
+                            href="https://www.health.state.mn.us/diseases/coronavirus/stats/wschool.pdf"
+                            target="_blank">this document</a> for the accepted case level per county. Contact your local
+                        county or school district for the learning model in effect for your area.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <p>Copyright &copy; 2020</p>
+    </footer>
+
+</body>
+
+</html>
